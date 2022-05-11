@@ -3,28 +3,13 @@ from .models import Author, Category, Article
 
 @admin.register(Author)
 class authorAdmin(admin.ModelAdmin):
-
-    def get_form(self, request, obj=None, **kwargs):
-        form = super().get_form(request, obj, **kwargs)
-        form.base_fields["author"].label = "Autor"
-        return form
+    pass
 
 @admin.register(Category)
 class categoryAdmin(admin.ModelAdmin):
-
-    def get_form(self, request, obj=None, **kwargs):
-        form = super().get_form(request, obj, **kwargs)
-        form.base_fields["category"].label = "Kategoria"
-        return form
+    pass
 
 @admin.register(Article)
 class articleAdmin(admin.ModelAdmin):
-    list_display = ("title", "author", "category")
-
-    def get_form(self, request, obj=None, **kwargs):
-        form = super().get_form(request, obj, **kwargs)
-        form.base_fields["title"].label = "Tytuł"
-        form.base_fields["description"].label = "Opis"
-        form.base_fields["author"].label = "Autor"
-        form.base_fields["category"].label = "Kategoria"
-        return form
+    list_display = ("id", "title", "author", "category", "created")
+    list_display_links = ("id", "title")
