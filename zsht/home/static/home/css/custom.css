@@ -1,0 +1,7 @@
+.title-color {
+    color:#20c997
+}
+.title-color-hover:hover {
+    color:hsla(162, 73%, 46%, 0.7) !important;
+    text-decoration: underline !important;
+}

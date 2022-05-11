@@ -7,8 +7,8 @@
     {% for article in articles %}
 
         <article>
-            <div class="article-date text-uppercase"></div>
-            <div class="article-title h2 mb-2"><a href="{% url 'zsht-article' article.id %}">{{ article.title }}</a></div>
+            <div class="text-muted text-uppercase"></div>
+            <div><a class="title-color title-color-hover h2 mb-2 text-decoration-none" href="{% url 'zsht-article' article.id %}">{{ article.title }}</a></div>
             <div>{{ article.description|safe|truncatewords:"100" }}</div>
             <div class="text-muted float-end">{{ article.author }}</div>
             <br><hr>
