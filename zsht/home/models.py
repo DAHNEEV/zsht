@@ -1,6 +1,7 @@
 from pyexpat import model
 from django.db import models
 from django.forms import forms
+from tinymce import models as tinymce_models
 
 class Author(models.Model):
     author = models.CharField(max_length=64)
@@ -24,7 +25,7 @@ class Category(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=128)
-    description = models.TextField()
+    description = tinymce_models.HTMLField()
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
 

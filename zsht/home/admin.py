@@ -25,6 +25,6 @@ class articleAdmin(admin.ModelAdmin):
         form = super().get_form(request, obj, **kwargs)
         form.base_fields["title"].label = "Tytuł"
         form.base_fields["description"].label = "Opis"
-        form.base_fields["author"].label = "Autorzy"
+        form.base_fields["author"].label = "Autor"
         form.base_fields["category"].label = "Kategoria"
         return form
