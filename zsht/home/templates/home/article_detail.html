@@ -5,7 +5,7 @@
     <article>
         <div class="article-date text-uppercase"></div>
         <div class="article-title h2 mb-2">{{ object.title }}</div>
-        <div>{{ object.description|safe|truncatewords:"100" }}</div>
+        <div>{{ object.description|safe }}</div>
         <div class="text-muted float-end">{{ object.author }}</div>
         <br><hr>
     </article>
