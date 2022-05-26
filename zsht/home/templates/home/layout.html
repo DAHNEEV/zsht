@@ -46,6 +46,15 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Koła</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'kola' %}">Logowanie</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{% url 'informatyka' %}">Informatyczne</a></li>
+                            <li><a class="dropdown-item" href="{% url 'matematyka' %}">Matematyczne</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Plan lekcji</a>
                     </li>
@@ -54,6 +63,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=4345a7b9-9a63-4910-a426-35363201d503&amp;redirect_uri=https%3A%2F%2Fwww.office.com%2Flanding&amp;response_type=code%20id_token&amp;scope=openid%20profile&amp;response_mode=form_post&amp;nonce=637359578595296834.ZDFmMmIxZWYtNDE1YS00Yjc5LWFkNzktMjUxNWUwZWVmNjFlZGI1OWI2MmYtZDYzOS00ZTE4LThlYmItYWM2MGQ2YmQ0M2E0&amp;ui_locales=pl&amp;mkt=pl&amp;client-request-id=1967a777-3cec-4b9c-888e-4acb2528fc5a&amp;state=tZugDY72q0ouWJHuxvbztYwgqelND4nhMnCefEeCfg9YgAQ0UKRW-rUDmofgyiKKUb1hILFwmUYu5kPIp-h66Vyo4mrAcp7l3SpQLWAyIyWfwbpHp_bm0g8N4AEyAsrzATeQBKwNOi24L0hIazN0pUlD8s7uJ3w3IdDqWvXpgI0t6lybFPwjsSzf-VM6p6QPUSvaYmvxi6yEvGDsHkw7RsIQ0HZ-sRE-0ilwPhLXRTKEdeSqAbBfe-2mA6nA1-ve9rdWJIPEVhIEqmGn0wwm_g&amp;x-client-SKU=ID_NETSTANDARD2_0&amp;x-client-ver=6.6.0.0">Office365</a>
+                    </li>
+                    <li class="nav-item align-self-center">
+                        <button id="toggle-btn"></button>
                     </li>
                 </ul>
             </div>
@@ -68,17 +80,20 @@
         <div class="container p-4">
             <div class="mb-2 text-center">
                 <ul class="list-unstyled mb-0 row">
-                    <li class="col-sm">ul. Partyzantów 1/5 <br> 34-500 Zakopane</li>
+                    <li class="col-sm text-white">ul. Partyzantów 1/5 <br> 34-500 Zakopane</li>
                     <li class="col-sm my-3 my-sm-0"><a href="tel:+182 066 846" class="mb-3 text-white text-decoration-none">tel: 182 066 846</a></li>
                     <li class="col-sm"><a href="mailto:sekretariat@zsht.pl" class="text-white text-decoration-none">email: sekretariat@zsht.pl</a></li>
                 </ul>
             </div>
         </div>
-        <div class="text-center p-2 bg-main">
+        <div class="text-center p-2 bg-main text-white">
             &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Zespół Szkół Hotelarsko-Turystycznych im. Władysława Zamoyskiego
         </div>
     </footer>
 
     <script src="../../static/home/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../static/home/js/tooglemode.js"></script>
+    
 </body>
 </html>

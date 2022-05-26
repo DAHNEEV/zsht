@@ -5,3 +5,9 @@
     color:hsla(162, 73%, 46%, 0.7) !important;
     text-decoration: underline !important;
 }
+#toggle-btn {
+    background: transparent;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+}
