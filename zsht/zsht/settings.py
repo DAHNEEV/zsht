@@ -113,7 +113,6 @@ STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'home/static'),
-    os.path.join(BASE_DIR,'kola/static'),
 ]
 
 MEDIA_URL = "/files/"

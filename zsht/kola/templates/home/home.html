@@ -1,0 +1,19 @@
+{% extends "home/layout.html" %}
+{% block title %}Strona główna{% endblock %}
+{% block content %}
+
+    <div class="mb-5"><h1>Aktualności</h1></div>
+
+    {% for article in articles %}
+
+        <article>
+            <div class="text-muted text-uppercase">{{ article.created }}</div>
+            <div class="mb-2"><a class="title-color title-color-hover h2 text-decoration-none" href="{% url 'zsht-article' article.id %}">{{ article.title }}</a></div>
+            <div>{{ article.description|safe|truncatewords:"100" }}</div>
+            <div class="text-muted float-end">autor: {{ article.author }}</div>
+            <br><hr>
+        </article>
+
+    {% endfor %}
+
+{% endblock %}
