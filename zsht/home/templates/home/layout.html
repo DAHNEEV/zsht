@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="../../static/home/css/bootstrap.css">
-    <link rel="stylesheet" href="../../static/home/css/custom.css">
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/custom.css' %}">
 </head>
 <body class="bg-dark d-flex flex-column min-vh-100 text-white">
 
@@ -51,8 +51,8 @@
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{% url 'kola' %}">Logowanie</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{% url 'informatyka' %}">Informatyczne</a></li>
-                            <li><a class="dropdown-item" href="{% url 'matematyka' %}">Matematyczne</a></li>
+                            <li><a class="dropdown-item" href="#">Informatyczne</a></li>
+                            <li><a class="dropdown-item" href="#">Matematyczne</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -91,9 +91,9 @@
         </div>
     </footer>
 
-    <script src="../../static/home/js/bootstrap.min.js"></script>
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../../static/home/js/tooglemode.js"></script>
+    <script src="{% static 'home/js/tooglemode.js' %}"></script>
     
 </body>
 </html>

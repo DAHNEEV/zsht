@@ -1,4 +1,6 @@
+from msilib.schema import Media
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,6 +22,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'tinymce',
+    'filedownload',
+    'kola.apps.KolaConfig',
     'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -105,7 +109,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'home/static'),
+    os.path.join(BASE_DIR,'kola/static'),
+]
+
+MEDIA_URL = "/files/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

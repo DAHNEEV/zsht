@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class KolaConfig(AppConfig):
+class FiledownloadConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'kola'
+    name = 'filedownload'
