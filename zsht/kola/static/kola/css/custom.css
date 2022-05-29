@@ -11,3 +11,6 @@
     width: 2rem;
     height: 2rem;
 }
+.form-container {
+    max-width: 25rem;
+}

@@ -8,6 +8,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Tytuł</th>
                 <th scope="col">Autor</th>
+                <th scope="col">Data utworzenia</th>
                 <th scope="col">Plik</th>
             </tr>
         </thead>
@@ -17,6 +18,7 @@
                     <th scope="row">{{ upload.id }}</th>
                     <td>{{ upload.title }}</td>
                     <td>{{ upload.author }}</td>
+                    <td>{{ upload.created }}</td>
                     <td><a href="{{ upload.file.url }}">Pobierz</a></td>
                 </tr>
             {% endfor %}
