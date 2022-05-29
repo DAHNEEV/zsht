@@ -17,7 +17,7 @@
                     <th scope="row">{{ upload.id }}</th>
                     <td>{{ upload.title }}</td>
                     <td>{{ upload.author }}</td>
-                    <td>{{ upload.file }}</td>
+                    <td><a href="{{ upload.file.url }}">Pobierz</a></td>
                 </tr>
             {% endfor %}
         </tbody>

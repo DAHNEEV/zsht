@@ -22,7 +22,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'tinymce',
-    'filedownload',
     'kola.apps.KolaConfig',
     'home.apps.HomeConfig',
     'django.contrib.admin',
@@ -109,13 +108,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'home/static'),
+    os.path.join(BASE_DIR,'kola/static'),
 ]
 
-MEDIA_URL = "/files/"
+MEDIA_URL = "files/"
+
+MEDIA_ROOT = 'files/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
