@@ -126,5 +126,6 @@ MEDIA_ROOT = 'files/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'kola-main'
+LOGIN_URL = 'kola-login'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
