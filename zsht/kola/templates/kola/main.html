@@ -1,0 +1,26 @@
+{% extends "kola/layout.html" %}
+{% block title %}Strona główna{% endblock %}
+{% block content %}
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tytuł</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Plik</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for upload in uploads %}
+                <tr>
+                    <th scope="row">{{ upload.id }}</th>
+                    <td>{{ upload.title }}</td>
+                    <td>{{ upload.author }}</td>
+                    <td>{{ upload.file }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

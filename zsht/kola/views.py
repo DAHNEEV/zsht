@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Upload
 
 def kola(request):
-    return render(request, 'home/home.html')
+    uploads = { 'uploads': Upload.objects.all().order_by('-id') }
+    return render(request, 'kola/main.html', uploads)
